@@ -2,8 +2,8 @@
 import sys
 
 def arg_list(arg):
-    n_arg = len(arg)
 
+    n_arg = len(arg)
     if n_arg == 0:
         print("0 arguments.")
     else:
@@ -14,6 +14,7 @@ def arg_list(arg):
             print("{:d} arguments:".format(n_arg))
             for i, arg in enumerate(arg, start=1):
                 print(f"{i}: {arg}")
+
 
 if __name__ == "__main__":
     arg = sys.argv[1:]
