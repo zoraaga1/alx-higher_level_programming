@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import sys
 
-def arg_list(arg):
 
+def arg_list(arg):
     n_arg = len(arg)
+
     if n_arg == 0:
         print("0 arguments.")
     else:
