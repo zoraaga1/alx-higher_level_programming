@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-from calculator_1 import add, sub, mul ,div
+from calculator_1 import add, sub, mul, div
 
 
 def main():
@@ -22,10 +22,8 @@ def main():
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-
     print("{} {} {} = {}".format(a, operat, b, result))
+
 
 if __name__ == "__main__":
     main()
-    
-
