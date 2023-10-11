@@ -28,8 +28,3 @@ def roman_to_int(roman_string):
         prev_value = value
 
     return result
-
-# Test the function
-roman_numeral = "MCMXCIV"  # Example: 1994
-integer_value = roman_to_int(roman_numeral)
-print(integer_value)  # Output: 1994
