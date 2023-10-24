@@ -58,7 +58,6 @@ class Square:
         """Returns the current square area."""
 
         area = self.__size ** 2
-        return area
 
     def my_print(self):
         """
@@ -73,5 +72,7 @@ class Square:
         else:
             if self.__position[1] > 0:
                 print("\n" * self.__position[1], end="")
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+            for i in range(self.__size):
+                if self.__position[0] > 0:
+                    print(" " * self.__position[0], end="")
+                print("#" * self.__size)
