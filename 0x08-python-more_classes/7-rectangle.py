@@ -22,13 +22,12 @@ class Rectangle:
         """Str method for print from main module."""
         if self.__height == 0 or self.__width == 0:
             return ''
-        if type(Rectangle.print_symbol) is str:
-            rectangle = str(Rectangle.print_symbol) * self.__width + '\n'
-            rectangle = rectangle * self.__height
-            return rectangle[:-1]
-        elif type(Rectangle.print_symbol) is list:
-            rectangle = [str(Rectangle.print_symbol)] * self.__width
-            return '\n'.join([''.join(rectangle)] * self.__height)
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+                return ("".join(rect))
 
     def __repr__(self):
         """Returns a string representation of the rectangle"""
