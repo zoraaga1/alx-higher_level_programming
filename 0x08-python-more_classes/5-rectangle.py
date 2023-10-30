@@ -23,9 +23,11 @@ class Rectangle:
         return rectangle[:-1]
 
     def __repr__(self):
+        """Returns a string representation of the rectangle"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
+        """Prints Bye rectangle... if an instance was deleted"""
         print('Bye rectangle...')
 
     @property
