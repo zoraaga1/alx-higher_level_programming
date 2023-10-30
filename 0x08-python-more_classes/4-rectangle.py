@@ -22,6 +22,9 @@ class Rectangle:
         rectangle = rectangle * self.__height
         return rectangle[:-1]
 
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
+
     @property
     def width(self):
         """Retrieves the width"""
