@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 import sys
+
 
 def is_safe(board, row, col, n):
     # Check the column on the left side
@@ -17,6 +19,7 @@ def is_safe(board, row, col, n):
             return False
 
     return True
+
 
 def solve_nqueens(n):
     if n < 4:
@@ -48,6 +51,7 @@ def solve_nqueens(n):
 
     if not solve(board, 0):
         return False
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
