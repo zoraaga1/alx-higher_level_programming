@@ -1,0 +1,15 @@
+# Test cases for matrix_divided function
+>>> from 2-matrix_divided import matrix_divided as matrix_divided
+
+# Test case 1: Normal matrix division
+>>> your_function_name([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+# Test case 2: Division by zero
+>>> your_function_name([[1, 2], [3, 4]], 0)
+# doctest: +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# Add more test cases to cover various scenarios
