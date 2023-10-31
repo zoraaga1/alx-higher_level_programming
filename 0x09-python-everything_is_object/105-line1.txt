@@ -1,2 +1,1 @@
-263
-before the execution of print("Love"), there are 263 small integer objects in memory (257 small positive integers and 5 small negative integers) due to this caching mechanism.
+262
