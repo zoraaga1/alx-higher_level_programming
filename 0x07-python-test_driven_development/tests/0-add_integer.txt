@@ -29,4 +29,6 @@ Traceback (most recent call last):
 TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
 
 >>> add_integer(1e1000, 2)
-Float overflow
+Traceback (most recent call last):
+    ...
+OverflowError: float too large to convert to int
