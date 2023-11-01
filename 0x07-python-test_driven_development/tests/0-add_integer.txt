@@ -32,3 +32,13 @@ TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
 Traceback (most recent call last):
     ...
 OverflowError: float too large to convert to int
+
+>>> matrix_divided()
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided([[1, 2], [3, 4]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
