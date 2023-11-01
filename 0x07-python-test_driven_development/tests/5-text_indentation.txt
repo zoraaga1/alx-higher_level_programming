@@ -1,0 +1,21 @@
+ This is a test case for text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Test.Text?Case:Example")
+Test.
+
+
+Test?
+
+
+case:
+
+
+Example
+
+
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
