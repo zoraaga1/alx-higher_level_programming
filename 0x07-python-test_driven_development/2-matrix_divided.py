@@ -4,6 +4,8 @@
 
 def matrix_divided(matrix, div):
     """dived matrix using div number"""
+    if div == float('inf'):
+        new_matrix = [[0.0 for _ in row] for row in matrix]
     new_matrix = []
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
