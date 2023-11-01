@@ -35,6 +35,4 @@ Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
-Traceback (most recent call last):
-    ...
-ZeroDivisionError: float division by zero
+[[0.0, 0.0], [0.0, 0.0]]
