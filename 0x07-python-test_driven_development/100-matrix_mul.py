@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Creat matrix_mul function"""
 
-def matrix_mul(m_a, m_b):
-    """Multiplies two matrix"""
-    def transpose(matrix):
+
+def transpose(matrix):
     """ transpose a matrix """
     new_matrix = []
     for column in matrix[0]:
