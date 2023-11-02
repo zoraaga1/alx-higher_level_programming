@@ -4,13 +4,18 @@ a text with 2 new lines
 after each of these characters: ., ? and :"""
 
 def text_indentation(text):
-    if not isinstance(text, str):
+    """Print 2 new lines after ., ?, or :"""
+    if type(text) is not str:
         raise TypeError("text must be a string")
-
-    new_str = ""
-    for ch in text:
-        if ch in {'.', '?', ':'}:
-            new_str += ch + '\n\n'
+    after_new_line = False
+    for c in text:
+        if after_new_line:
+            if c == " ":
+                continue
+            after_new_line = False
+        if c == '.' or c == '?' or c == ':':
+            print(c)
+            print("")
+            after_new_line = True
         else:
-            new_str += ch
-    print(new_str)
+            print(c, end="")
