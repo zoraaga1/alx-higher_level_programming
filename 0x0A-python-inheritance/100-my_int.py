@@ -2,7 +2,7 @@
 """Square class Module"""
 
 
-class MyInt:
+class MyInt(int):
     """Class MyInt inherits from int"""
     def __eq__(self, other):
         """Inverts == operator"""
