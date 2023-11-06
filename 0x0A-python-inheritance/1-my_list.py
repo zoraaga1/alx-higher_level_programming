@@ -3,7 +3,7 @@
 
 
 class MyList(list):
-    """inherits from list:
+    """inherits list:
         Public instance method:
             def print_sorted(self)"""
     pass
