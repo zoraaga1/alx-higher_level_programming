@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square class Module"""
 
+
 class MyInt:
     """Class MyInt inherits from int"""
     def __eq__(self, other):
