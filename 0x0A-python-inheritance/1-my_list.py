@@ -10,4 +10,4 @@ class MyList(list):
         """Prints the list,
                 but sorted (ascending sort)"""
         sorted_list = sorted(self)
-        print(sorted_list)
+        print("{}".format(sorted_list))
