@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square class Module"""
+"""MyInt class Module"""
 
 
 class MyInt(int):
