@@ -6,8 +6,8 @@ class MyList(list):
     """inherits list:
         Public instance method:
             def print_sorted(self)"""
+    pass
 
     def print_sorted(self):
-        """Prints the list,
-                but sorted (ascending sort)"""
-        return sorted(self)
+        """Sorte a list"""
+        print(sorted(list(self)))
