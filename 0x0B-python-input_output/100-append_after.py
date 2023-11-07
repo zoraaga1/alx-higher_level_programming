@@ -3,13 +3,13 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """Inserts new_string after each line
-    containing search_string in the filename"""
-    with open(filename, "r", encoding='utf-8') as file:
-        lines = file.readlines()
-
-    with open(filename, "w", encoding='utf-8') as file:
-        for line in lines:
-            file.write(line)
+    """Insert text after 
+    each line containing a given string in a file."""
+    text = ""
+    with open(filename) as r:
+        for line in r:
+            text += line
             if search_string in line:
-                file.write(new_string + "\n")
+                text += new_string
+    with open(filename, "w") as w:
+        w.write(text)
