@@ -8,4 +8,3 @@ def append_write(filename="", text=""):
     with open(filename, "a", encoding="UTF-8") as file:
         char_count = file.write(text)
         return char_count
-    
