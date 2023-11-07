@@ -2,7 +2,7 @@
 """Create pascal_triangle function """
 
 
-def  pascal_triangle(n):
+def pascal_triangle(n):
     """print pascal triangle"""
     triangle = []
 
