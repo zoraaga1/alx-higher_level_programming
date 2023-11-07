@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Create from_json_string function"""
+"""Create fm_json_string function"""
 
 
 import json
