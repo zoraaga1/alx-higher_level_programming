@@ -36,3 +36,10 @@ class Square(Rectangle):
         *args: id, size, x, y in this order
         **kwargs: key/value pairs representing attributes
         """
+        if args:
+            attrs = ["id", "size", "x", "y"]
+            for attr, value in zip(attrs, args):
+                setattr(self, attrs[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
