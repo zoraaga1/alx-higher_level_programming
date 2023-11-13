@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Create Rectangle class"""
 
+
 from base import Base
+
 
 class Rectangle(Base):
     """Rectangle class, inherits from Base"""
@@ -15,7 +17,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """Prints human readeable string"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (
+            f"[Rectangle] ({self.id}) "
+            f"{self.x}/{self.y} - {self.width}/{self.height}"
+        )
 
     @property
     def width(self):
@@ -44,9 +49,8 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-        
-        self.__height = value
 
+        self.__height = value
 
     @property
     def x(self):
@@ -61,9 +65,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
 
-
         self.__x = value
-
 
     @property
     def y(self):
@@ -83,7 +85,7 @@ class Rectangle(Base):
     def area(self):
         """Returns the area value of the Rectangle instance"""
         return self.height * self.width
-    
+
     def display(self):
         """Prints in stdout
         the Rectangle instance with the character #,
@@ -98,7 +100,7 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args, **kwargs)
+    def update(self, *args, **kwargs):
         """Assigns arguments to attributes using key-value pairs:
         If *args exists and is not empty, **kwargs must be skipped
         *args: id, width, height, x, y in this order
