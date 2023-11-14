@@ -108,7 +108,6 @@ class Base:
         except FileNotFoundError:
             return []
 
-
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Opens a window and draws all the Rectangles and Squares"""
