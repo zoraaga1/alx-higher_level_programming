@@ -83,11 +83,15 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serializes and saves instances to a CSV file."""
-        filename = f"{cls.__name__}.csv"
-        with open(filename, 'w', newline='') as file:
-            writer = csv.writer(file)
-            for obj in list_objs:
-                writer.writerow(obj.to_csv_row())
+        filename = cls.__name__ + ".csv"
+        if cls.__name__ == "Rectangle":
+            csv_format = ["id", "width", "height", "x", "y"]
+        if cls.__name__ == "Square":
+            csv_format = ["id", "size", "x", "y"]
+
+        with open(filename, mode="w") as data:
+            writer = csv.DictWriter(data, fieldnames=csv_format)
+            [writer.writerow(item.to_dictionary()) for item in list_objs]
 
     @classmethod
     def load_from_file_csv(cls):
