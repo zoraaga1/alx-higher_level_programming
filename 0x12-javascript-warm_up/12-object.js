@@ -1,3 +1,10 @@
 #!/usr/bin/node
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
 
-console.log(process.argv.length < 4 ? 0 : process.argv.slice(2).sort((a, b) => b - a)[1]);
+myObject.value = 89;
+
+console.log(myObject);
