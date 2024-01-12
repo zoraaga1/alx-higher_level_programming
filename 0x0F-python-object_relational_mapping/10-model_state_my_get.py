@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script that prints the State object with the name passed as an argument
-from the database - Using module SQLAlchemy
+from the database using module SQLAlchemy
 """
 
 from model_state import Base, State
