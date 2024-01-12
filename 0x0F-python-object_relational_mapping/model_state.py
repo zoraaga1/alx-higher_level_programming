@@ -10,6 +10,7 @@ from sys import argv
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     Class State that inherits from Base.
@@ -21,6 +22,8 @@ class State(Base):
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
 
+
 if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(argv[1], argv[2], argv[3]))
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
+                           .format(argv[1], argv[2], argv[3]))
     Base.metadata.create_all(engine)
