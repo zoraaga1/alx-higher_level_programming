@@ -4,6 +4,7 @@
 import MySQLdb
 from sys import argv
 
+
 def main():
     """Main function to execute the script."""
     conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
@@ -16,6 +17,7 @@ def main():
         print(row)
     cur.close()
     conn.close()
+
 
 if __name__ == "__main__":
     main()
