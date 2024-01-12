@@ -2,7 +2,7 @@
 """
 This script connects to a MySQL server,
 retrieves all cities from a specific database,
-and prints the results ordered by state IDs.
+and prints the results ordered by state ID.
 """
 
 import MySQLdb
