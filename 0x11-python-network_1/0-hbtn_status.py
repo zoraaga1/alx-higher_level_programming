@@ -3,12 +3,13 @@
 Fetches https://alx-intranet.hbtn.io/status
 """
 
-import urllib.request
+from urllib.request import Request, urlopen
+
 
 if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
+    url = Request("https://alx-intranet.hbtn.io/status")
 
-    with urllib.request.urlopen(url) as response:
+    with urlopen(url) as response:
         body = response.read()
         print("Body response:")
         print("\t- type:", type(body))
