@@ -2,18 +2,24 @@
 
 const request = require('request');
 const apiUrl = process.argv[2];
-const characterId = 18;
 
-request(apiUrl, (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
+let times = 0;
+
+request(apiUrl, function (_err, _res, body) {
+  body = JSON.parse(body).results;
+
+  for (let i = 0; i < body.length; ++i) {
+    const characters = body[i].characters;
+
+    for (let j = 0; j < characters.length; ++j) {
+      const character = characters[j];
+      const characterId = character.split('/')[5];
+
+      if (characterId === '18') {
+        times += 1;
+      }
+    }
   }
 
-  const films = JSON.parse(body).results;
-  const moviesWithWedgeAntilles = films.filter(film =>
-    film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
-  );
-
-  console.log(moviesWithWedgeAntilles.length);
+  console.log(times);
 });
